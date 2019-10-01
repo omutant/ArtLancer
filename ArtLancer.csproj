@@ -65,6 +65,12 @@
     <Compile Include="Views\MainPanel.xaml.cs">
       <DependentUpon>MainPanel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\OptionsPanel.xaml.cs">
+      <DependentUpon>OptionsPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReferencePanel.xaml.cs">
+      <DependentUpon>ReferencePanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\TopBar.xaml.cs">
       <DependentUpon>TopBar.xaml</DependentUpon>
     </Compile>
@@ -85,6 +91,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\MainPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\OptionsPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ReferencePanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

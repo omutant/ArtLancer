@@ -12,30 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Windows.Media.Animation;
 
-namespace ArtLancer
+namespace ArtLancer.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for OptionsPanel.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class OptionsPanel : UserControl
     {
-        public MainWindow()
+        public OptionsPanel()
         {
             InitializeComponent();
-            
-            LoadInBottomLeft();
         }
-
-        private void LoadInBottomLeft()
-        {
-            var desktopWorkingArea = System.Windows.SystemParameters.WorkArea;
-            this.Left = desktopWorkingArea.Left;
-            this.Top = desktopWorkingArea.Bottom - this.Height;
-        }
-
-
-
     }
 }

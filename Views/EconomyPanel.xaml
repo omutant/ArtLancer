@@ -5,9 +5,21 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ArtLancer.Views"
              xmlns:viewModel="clr-namespace:ArtLancer.ViewModels"
+             xmlns:System="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d" 
              d:DesignHeight="330" d:DesignWidth="250">
 
+    <UserControl.Resources>
+        <System:Double x:Key="EM">150</System:Double>
+        
+        <Storyboard x:Key="Ref_Open">
+            <ThicknessAnimation Storyboard.TargetProperty="Margin" From=" 0,0,{StaticResource EM},0" To="0,0,0,0" DecelerationRatio=".5" Duration="0:0:1" />
+        </Storyboard>
+        <Storyboard x:Key="Ref_Close">
+            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,0,0,0" To=" 0,0,{StaticResource EM},0" DecelerationRatio=".5" Duration="0:0:1" />
+        </Storyboard>
+    </UserControl.Resources>
+    
     <UserControl.DataContext>
         <viewModel:MainPanelLogic/>
     </UserControl.DataContext>

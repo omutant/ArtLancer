@@ -5,16 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ArtLancer"
         xmlns:views = "clr-namespace:ArtLancer.Views"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         WindowStyle="None"
         AllowsTransparency="True"
         Background="#22FFFFFF"
-        Title="MainWindow" Height="660" Width="630">
+        Title="MainWindow" Height="660" Width="730">
+
+    <Window.Resources>
+        
+        
+
+        
+        <Storyboard x:Key="Econ_Open">
+            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,0,{StaticResource EM},0" To="0,0,0,0" DecelerationRatio=".5" Duration="0:0:1" />
+        </Storyboard>
+        <Storyboard x:Key="Econ_Close">
+            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,0,0,0" To="0,0,{StaticResource EM},0" DecelerationRatio=".5" Duration="0:0:1" />
+        </Storyboard>
+    </Window.Resources>
+    
+    
     <!-- Main Grid -->
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2.5*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -34,12 +50,12 @@
 
         <!-- References -->
         <Grid Grid.Row="2" Grid.Column="1">
-
+            <views:ReferencePanel/>
         </Grid>
 
         <!-- Options -->
         <Grid Grid.Row="1" Grid.Column="1">
-            
+            <views:OptionsPanel/>
         </Grid>
 
 
