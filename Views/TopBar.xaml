@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="ArtLancer.Views.TopBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:ArtLancer.Views"
+             xmlns:viewModel="clr-namespace:ArtLancer.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="250" Height="30">
+
+    <UserControl.DataContext>
+        <viewModel:TopBarVW/>
+    </UserControl.DataContext>
+
+    <Grid Background="#FFC3C3C3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <TextBlock Text="Example"></TextBlock>
+        </Grid>
+        
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="6*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Column="1"></Button>
+            <Button Grid.Column="2"></Button>
+        </Grid>
+
+    </Grid>
+</UserControl>
