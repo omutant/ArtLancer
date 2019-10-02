@@ -9,9 +9,12 @@
         mc:Ignorable="d"
         WindowStyle="None"
         AllowsTransparency="True"
-        Background="#22FFFFFF"
+        Background="#00FFFFFF"
         Title="MainWindow" Height="660" Width="730">
 
+        
+    
+    
     <!-- Main Grid -->
     <Grid>
         <Grid.ColumnDefinitions>
@@ -20,7 +23,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height=".6*"/>
-            <RowDefinition Height="2.4*"/>
+            <RowDefinition Height="3*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
 

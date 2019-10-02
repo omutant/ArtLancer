@@ -21,8 +21,18 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="30"/>
         </Grid.ColumnDefinitions>
+
+        <Grid Background="White">
+            
+        </Grid>
         
-        <Button/>
-        <Button x:Name="RefToggler" Click="RefPan_Toggle" Grid.Column="1" Height="30" VerticalAlignment="Top"></Button>
+        <Button 
+            x:Name="RefToggler" 
+            Click="RefPan_Toggle" 
+            Grid.Column="1" 
+            Height="30" 
+            VerticalAlignment="Top"
+            Style="{StaticResource RightRound}"
+            />
     </Grid>
 </UserControl>
