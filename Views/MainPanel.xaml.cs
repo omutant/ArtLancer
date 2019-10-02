@@ -24,5 +24,11 @@ namespace ArtLancer.Views
         {
             InitializeComponent();
         }
+
+
+        private void OnClick_CloseApp(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

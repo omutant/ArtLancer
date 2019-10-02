@@ -16,10 +16,10 @@
         <System:Double x:Key="EM">150</System:Double>
         
         <Storyboard x:Key="Econ_Open">
-            <ThicknessAnimation Storyboard.TargetProperty="Margin" From=" 0,205,0,0" To="0,0,0,0" DecelerationRatio=".5" Duration="0:0:1" />
+            <ThicknessAnimation Storyboard.TargetProperty="Margin" From=" 0,150,0,0" To="0,0,0,0" DecelerationRatio=".5" Duration="0:0:1" />
         </Storyboard>
         <Storyboard x:Key="Econ_Close">
-            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,0,0,0" To=" 0,205,0,0" DecelerationRatio=".5" Duration="0:0:1" />
+            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,0,0,0" To=" 0,150,0,0" DecelerationRatio=".5" Duration="0:0:1" />
         </Storyboard>
     </UserControl.Resources>
     
@@ -27,7 +27,7 @@
         <viewModel:MainPanelLogic/>
     </UserControl.DataContext>
 
-    <Grid x:Name="Econ" Margin="0,205,0,0">
+    <Grid x:Name="Econ" Margin="0,150,0,0">
         <Grid.ColumnDefinitions>
             
         </Grid.ColumnDefinitions>
@@ -35,9 +35,22 @@
             <RowDefinition Height="150"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="8*"/>
+            <RowDefinition Height="4*"/>
         </Grid.RowDefinitions>
 
+        <!-- Works. But needs more control so the gif only plays once (plus transparency needs fixing)
+        <MediaElement 
+            Source="C:\Users\Thomas Berg Pedersen\Desktop\ArtLancer\ArtLancer\OmuAnim_Rough.gif"
+            Width="140"  
+            LoadedBehavior="Play"
+            VerticalAlignment="Bottom"
+            Stretch="Uniform"
+            >
+            <MediaElement.OpacityMask>
+                <ImageBrush ImageSource="C:\Users\Thomas Berg Pedersen\Desktop\ArtLancer\ArtLancer\OmuAnim_Rough.gif"/>
+            </MediaElement.OpacityMask>
+        </MediaElement>
+        --> 
         <Image 
             Source="/ArtLancer;component/Omu.png" 
             Grid.Row="0" 
@@ -46,6 +59,7 @@
             Width="140"
             VerticalAlignment="Bottom"
         />
+        
 
         <Button 
             x:Name="EconToggler" 

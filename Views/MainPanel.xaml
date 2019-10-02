@@ -25,26 +25,86 @@
         </Grid.RowDefinitions>
 
         <Grid Background="White">
-            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button>
+                File
+            </Button>
         </Grid>
 
         <Grid Background="White" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
 
+            <!--    
+                This button is supposed to be used as a
+                handle the user can either hold down
+                to drag the window around. Or click to reset
+                the window to the last sticky position
+                (Top right, bottom left, bottom middle etc.)
+            -->
+            <Button 
+                Style="{StaticResource AllRound_Yellow}"
+                >
+                
+            </Button>
+            <Button 
+                Grid.Column="1" 
+                Style="{StaticResource AllRound_Red}" 
+                Click="OnClick_CloseApp"
+                >
+
+            </Button>
         </Grid>
 
         <Grid Background="White" Grid.Row="1" Grid.ColumnSpan="2">
-
+            <TextBlock Text="Project: OU_Manager" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"/>
         </Grid>
 
         <Grid Background="White" Grid.Row="2" Grid.ColumnSpan="2">
-
+            <TextBlock 
+                TextWrapping="Wrap"
+                Text="I have to create a small app which with minimal input from the user 
+can set up all objects needed to set up a new department with groups and employees on a company server"/>
         </Grid>
         
         
 
 
         <Border BorderBrush="White" Background="White" BorderThickness="1" CornerRadius="0 0 0 50" Grid.Row="3" Grid.ColumnSpan="2">
-            <Grid />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    TextWrapping="Wrap"
+                    FontSize="20"
+                    Text="Deadline 
+                    09-Oct-2019">
+                    
+                </TextBlock>
+                <Button Grid.Column="1">
+                    Done
+                </Button>
+            </Grid>
+            
+            
         </Border>
 
     </Grid>
