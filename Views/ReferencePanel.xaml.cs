@@ -21,7 +21,7 @@ namespace ArtLancer.Views
     /// </summary>
     public partial class ReferencePanel : UserControl
     {
-        public bool showingRef = false;
+        public bool showingRef = true;
         public ReferencePanel()
         {
             InitializeComponent();
@@ -32,18 +32,18 @@ namespace ArtLancer.Views
         {
             if (!showingRef)
             {
-                ToggleMenu("Ref_Close", RefToggler, Ref);
+                ToggleMenu("Ref_Close", Ref);
                 showingRef = true;
             }
             else
             {
-                ToggleMenu("Ref_Open", RefToggler, Ref);
+                ToggleMenu("Ref_Open", Ref);
                 showingRef = false;
             }
             //ShowHideMenu("sbShowLeftMenu", btnLeftMenuHide, btnLeftMenuShow, pnlLeftMenu);
         }
 
-        public void ToggleMenu(string Storyboard, Button toggler, Grid target)
+        public void ToggleMenu(string Storyboard, Grid target)
         {
             Storyboard sb = Resources[Storyboard] as Storyboard;
             sb.Begin(target);

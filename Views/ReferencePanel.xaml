@@ -9,21 +9,20 @@
 
     <UserControl.Resources>
         <Storyboard x:Key="Ref_Open">
-            <ThicknessAnimation Storyboard.TargetProperty="Margin" From=" 0,0,470,0" To="0,0,0,0" DecelerationRatio=".5" Duration="0:0:1" />
+            <ThicknessAnimation Storyboard.TargetProperty="Margin" From=" 0,0,491,0" To="0,0,0,0" DecelerationRatio=".5" Duration="0:0:1" />
         </Storyboard>
         <Storyboard x:Key="Ref_Close">
-            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,0,0,0" To=" 0,0,470,0" DecelerationRatio=".5" Duration="0:0:1" />
+            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,0,0,0" To=" 0,0,491,0" DecelerationRatio=".5" Duration="0:0:1" />
         </Storyboard>
     </UserControl.Resources>
 
-    <Grid x:Name="Ref">
+    <Grid x:Name="Ref" Margin="0,0,491,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="30"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="Nicker">
-            <Label x:Name="lbl" Content="Label" Height="34" Width="98"/>
-        </Button>
-        <Button x:Name="RefToggler" Click="RefPan_Toggle" Grid.Column="1" Height="50" VerticalAlignment="Top"></Button>
+        
+        <Button/>
+        <Button x:Name="RefToggler" Click="RefPan_Toggle" Grid.Column="1" Height="30" VerticalAlignment="Top"></Button>
     </Grid>
 </UserControl>

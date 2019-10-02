@@ -12,20 +12,6 @@
         Background="#22FFFFFF"
         Title="MainWindow" Height="660" Width="730">
 
-    <Window.Resources>
-        
-        
-
-        
-        <Storyboard x:Key="Econ_Open">
-            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,0,{StaticResource EM},0" To="0,0,0,0" DecelerationRatio=".5" Duration="0:0:1" />
-        </Storyboard>
-        <Storyboard x:Key="Econ_Close">
-            <ThicknessAnimation Storyboard.TargetProperty="Margin" From="0,0,0,0" To="0,0,{StaticResource EM},0" DecelerationRatio=".5" Duration="0:0:1" />
-        </Storyboard>
-    </Window.Resources>
-    
-    
     <!-- Main Grid -->
     <Grid>
         <Grid.ColumnDefinitions>
@@ -33,11 +19,11 @@
             <ColumnDefinition Width="2.5*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height=".6*"/>
+            <RowDefinition Height="2.4*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        
+
         <!-- Main "window" -->
         <Grid Grid.Row="2" Grid.Column="0">
             <views:MainPanel/>
@@ -55,14 +41,14 @@
 
         <!-- Options -->
         <Grid Grid.Row="1" Grid.Column="1">
-            <views:OptionsPanel/>
+            <views:OptionsPanel Height="200" Width="163" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
         </Grid>
 
 
     </Grid>
 </Window>
 
-        <!-- Old view setup
+<!-- Old view setup
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="2*"/>
